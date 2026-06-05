@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "eval_file": "/public-demo/swe-evals/evals/dayjs-v1.eval.yaml",
+    "timestamp": "2026-06-05T14:26:44.846Z",
+    "targets": [
+      "codex"
+    ],
+    "tests_run": [
+      "dayjs-year-format-leading-zeroes"
+    ],
+    "experiment": "av-h60-live-codex-azure",
+    "planned_test_count": 3
+  },
+  "run_summary": {
+    "codex": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0
+      },
+      "time_seconds": {
+        "mean": 284.165,
+        "stddev": 19.095
+      },
+      "tokens": {
+        "mean": 283291.333,
+        "stddev": 14301.304
+      }
+    }
+  },
+  "per_grader_summary": {
+    "focused-jest:code-grader": {
+      "mean": 1,
+      "stddev": 0
+    }
+  },
+  "notes": []
+}
