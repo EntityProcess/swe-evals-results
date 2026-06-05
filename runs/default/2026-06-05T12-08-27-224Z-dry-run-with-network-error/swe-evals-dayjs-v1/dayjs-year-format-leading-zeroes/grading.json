@@ -1,0 +1,47 @@
+{
+  "assertions": [
+    {
+      "text": "Focused command passes: npx jest test/display.test.js --runInBand --coverage=false",
+      "passed": false,
+      "evidence": "FAIL test/display.test.js\n  ✓ Format no formatStr (11ms)\n  ✓ Format invalid date (13ms)\n  ✓ Format Year YY YYYY (3ms)\n  ✓ Format Month M MM MMM MMMM (52ms)\n  ✓ Format Day of Month D DD 1 - 31 (63ms)\n  ✓ Format Day of Week d Sun - Sat (19ms)\n  ✓ Format Hour H HH 24-hour (179ms)\n  ✓ Format Hour h hh 12-hour (6ms)\n  ✓ Format meridiens a A am / pm (8ms)\n  ✓ Format Minute m mm (1ms)\n  ✓ Format Second s ss SSS (2ms)\n  ✓ Format Time Zone ZZ (15ms)\n  ✓ Format ddd dd MMM with short locale (9ms)\n  ✓ Format token value is 0 (1ms)\n  ✓ Format Complex with other string - : /  (1ms)\n  ✓ Format Escaping characters (1ms)\n  ✓ Unix Timestamp (milliseconds) (1ms)\n  ✓ Unix Timestamp (seconds) (1ms)\n  ✓ Days in Month (1ms)\n  ✓ Utc Offset (1ms)\n  ✓ As Javascript Date -> toDate (1ms)\n  ✓ As JSON -> toJSON (41ms)\n  ✓ As ISO 8601 String -> toISOString e.g. 2013-02-04T22:44:30.652Z\n  ✕ Year 1 formatted with YYYY should pad with zeroes (4ms)\n  ✕ Year 1 formatting matches moment format (2ms)\n  Difference\n    ✓ empty -> default milliseconds (6ms)\n    ✓ diff -> none dayjs object (3ms)\n    ✓ diff -> in seconds, minutes, hours, days, weeks, months, quarters, years  (16ms)\n    ✓ Special diff in month according to moment.js (23ms)\n    ✓ MonthDiff (2ms)\n    ✓ undefined edge case (1ms)\n\n  ● Year 1 formatted with YYYY should pad with zeroes\n\n    expect(received).toBe(expected) // Object.is equality\n    \n    Expected value to be:\n      \"0001\"\n    Received:\n      \"1\"\n\n      265 |   const date = new Date(1, 0, 1)\n      266 |   date.setUTCFullYear(1) // Required because 0-99 are parsed as 19xx in JS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#year\n    > 267 |   expect(dayjs(date).format('YYYY')).toBe('0001')\n      268 | })\n      269 |\n      270 | it('Year 1 formatting matches moment format', () => {\n      \n      at Object.<anonymous> (test/display.test.js:267:38)\n\n  ● Year 1 formatting matches moment format\n\n    expect(received).toBe(expected) // Object.is equality\n    \n    Expected value to be:\n      \"0001\"\n    Received:\n      \"1\"\n\n      271 |   const date = new Date(1, 0, 1)\n      272 |   date.setUTCFullYear(1)\n    > 273 |   expect(dayjs(date).format('YYYY')).toBe(moment(date).format('YYYY'))\n      274 | })\n      275 |\n      \n      at Object.<anonymous> (test/display.test.js:273:38)\n\nTest Suites: 1 failed, 1 total\nTests:       2 failed, 29 passed, 31 total\nSnapshots:   0 total\nTime:        3.683s\nRan all test suites matching /test\\/display.test.js/i."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "graders": [
+    {
+      "name": "focused-jest",
+      "type": "code-grader",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "Focused command passes: npx jest test/display.test.js --runInBand --coverage=false",
+          "passed": false,
+          "evidence": "FAIL test/display.test.js\n  ✓ Format no formatStr (11ms)\n  ✓ Format invalid date (13ms)\n  ✓ Format Year YY YYYY (3ms)\n  ✓ Format Month M MM MMM MMMM (52ms)\n  ✓ Format Day of Month D DD 1 - 31 (63ms)\n  ✓ Format Day of Week d Sun - Sat (19ms)\n  ✓ Format Hour H HH 24-hour (179ms)\n  ✓ Format Hour h hh 12-hour (6ms)\n  ✓ Format meridiens a A am / pm (8ms)\n  ✓ Format Minute m mm (1ms)\n  ✓ Format Second s ss SSS (2ms)\n  ✓ Format Time Zone ZZ (15ms)\n  ✓ Format ddd dd MMM with short locale (9ms)\n  ✓ Format token value is 0 (1ms)\n  ✓ Format Complex with other string - : /  (1ms)\n  ✓ Format Escaping characters (1ms)\n  ✓ Unix Timestamp (milliseconds) (1ms)\n  ✓ Unix Timestamp (seconds) (1ms)\n  ✓ Days in Month (1ms)\n  ✓ Utc Offset (1ms)\n  ✓ As Javascript Date -> toDate (1ms)\n  ✓ As JSON -> toJSON (41ms)\n  ✓ As ISO 8601 String -> toISOString e.g. 2013-02-04T22:44:30.652Z\n  ✕ Year 1 formatted with YYYY should pad with zeroes (4ms)\n  ✕ Year 1 formatting matches moment format (2ms)\n  Difference\n    ✓ empty -> default milliseconds (6ms)\n    ✓ diff -> none dayjs object (3ms)\n    ✓ diff -> in seconds, minutes, hours, days, weeks, months, quarters, years  (16ms)\n    ✓ Special diff in month according to moment.js (23ms)\n    ✓ MonthDiff (2ms)\n    ✓ undefined edge case (1ms)\n\n  ● Year 1 formatted with YYYY should pad with zeroes\n\n    expect(received).toBe(expected) // Object.is equality\n    \n    Expected value to be:\n      \"0001\"\n    Received:\n      \"1\"\n\n      265 |   const date = new Date(1, 0, 1)\n      266 |   date.setUTCFullYear(1) // Required because 0-99 are parsed as 19xx in JS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#year\n    > 267 |   expect(dayjs(date).format('YYYY')).toBe('0001')\n      268 | })\n      269 |\n      270 | it('Year 1 formatting matches moment format', () => {\n      \n      at Object.<anonymous> (test/display.test.js:267:38)\n\n  ● Year 1 formatting matches moment format\n\n    expect(received).toBe(expected) // Object.is equality\n    \n    Expected value to be:\n      \"0001\"\n    Received:\n      \"1\"\n\n      271 |   const date = new Date(1, 0, 1)\n      272 |   date.setUTCFullYear(1)\n    > 273 |   expect(dayjs(date).format('YYYY')).toBe(moment(date).format('YYYY'))\n      274 | })\n      275 |\n      \n      at Object.<anonymous> (test/display.test.js:273:38)\n\nTest Suites: 1 failed, 1 total\nTests:       2 failed, 29 passed, 31 total\nSnapshots:   0 total\nTime:        3.683s\nRan all test suites matching /test\\/display.test.js/i."
+        }
+      ],
+      "details": {
+        "command": [
+          "npx",
+          "jest",
+          "test/display.test.js",
+          "--runInBand",
+          "--coverage=false"
+        ],
+        "exit_code": 1
+      }
+    }
+  ]
+}

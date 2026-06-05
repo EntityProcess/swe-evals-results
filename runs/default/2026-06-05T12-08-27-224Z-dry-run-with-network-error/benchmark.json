@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "eval_file": "<swe-evals-checkout>/evals/dayjs-v1.eval.yaml",
+    "timestamp": "2026-06-05T12:10:35.836Z",
+    "targets": [
+      "codex-dry-run"
+    ],
+    "tests_run": [
+      "dayjs-year-format-leading-zeroes"
+    ],
+    "experiment": "default",
+    "planned_test_count": 3
+  },
+  "run_summary": {
+    "codex-dry-run": {
+      "pass_rate": {
+        "mean": 0,
+        "stddev": 0
+      },
+      "time_seconds": {
+        "mean": 0,
+        "stddev": 0
+      },
+      "tokens": {
+        "mean": 0,
+        "stddev": 0
+      }
+    }
+  },
+  "per_grader_summary": {
+    "focused-jest:code-grader": {
+      "mean": 0,
+      "stddev": 0
+    }
+  },
+  "notes": [
+    "1 test(s) had execution errors and are included in pass_rate as failures"
+  ]
+}
