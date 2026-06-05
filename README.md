@@ -3,8 +3,8 @@
 Public-safe AgentV result artifacts for the `swe-evals` demo project.
 
 Source eval definitions live in `EntityProcess/swe-evals`. This repo stores
-Dashboard-ready artifacts under `runs/` only. Before pushing artifacts, run the
-public artifact preflight from `agentv-deploy`:
+Dashboard-ready artifacts under `.agentv/results/runs/` only. Before pushing
+artifacts, run the public artifact preflight from `agentv-deploy`:
 
 ```sh
 python3 ../agentv-deploy/scripts/check-public-result-artifacts.py .
